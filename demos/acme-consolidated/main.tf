@@ -26,7 +26,7 @@ module "acme-cert" {
   # above, uncomment the one below, and ensure the dns module source
   # is loaded from modules/dns/direct. This current approach has been
   # done to remove a cyclic dependency.
-  acme_certificate_common_name = "${var.demo_domain_subdomain}.${var.demo_domain_name}"
+  acme_certificate_common_name = "${var.demo_domain_name}.${var.demo_domain_subdomain}"
 
   acme_challenge_aws_access_key_id     = "${var.demo_acme_challenge_aws_access_key_id}"
   acme_challenge_aws_secret_access_key = "${var.demo_acme_challenge_aws_secret_access_key}"
